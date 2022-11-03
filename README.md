@@ -44,4 +44,4 @@ Rename your png `img.png` and start using `node index.js`, `export.u8d` contains
 ### Gallery
 <img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037532705757351966/image.png">
 <img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037394873634013205/unknown.png">
-<iframe id="video" width="560" height="315" src="https://user-images.githubusercontent.com/49074962/199749711-c8dc322f-f3a6-4f22-8917-267bb44a5b3e.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+[Outdated Video](https://user-images.githubusercontent.com/49074962/199749711-c8dc322f-f3a6-4f22-8917-267bb44a5b3e.mp4)
