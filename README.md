@@ -42,10 +42,8 @@ Follow this if you wouldn't setup the server, only supports PNGs.
 Rename your png `img.png` and start using `node index.js`, `export.u8d` contains the data to use.
 
 ### Gallery
-<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037532705757351966/image.png" style="border-radius: 8px;">
-<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037394873634013205/unknown.png" style="border-radius: 8px;">
+<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037532705757351966/image.png">
+<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037394873634013205/unknown.png">
+
 (Outdated video)
-<video controls width="320" height="240">
-    <source type="video/mp4" src="https://cdn.discordapp.com/attachments/1036834806140502027/1037117054089711707/RobloxPlayerBeta_g5nXZ5EGi9.mp4">
-    Video is not supported.
-</video>
+https://user-images.githubusercontent.com/49074962/199749711-c8dc322f-f3a6-4f22-8917-267bb44a5b3e.mp4
