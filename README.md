@@ -40,3 +40,11 @@ Follow this if you wouldn't setup the server, only supports PNGs.
 - [ndarray-pixels](https://www.npmjs.com/package/ndarray-pixels)
 
 Rename your png `img.png` and start using `node index.js`, `export.u8d` contains the data to use.
+
+### Gallery
+<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037532705757351966/image.png" style="border-radius: 8px;">
+<img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037394873634013205/unknown.png" style="border-radius: 8px;">
+(Outdated video)
+<video>
+    <source type="video/mp4" src="https://cdn.discordapp.com/attachments/1036834806140502027/1037117054089711707/RobloxPlayerBeta_g5nXZ5EGi9.mp4">
+</video>
