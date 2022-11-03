@@ -2,7 +2,7 @@ local Canvas = workspace:WaitForChild("Billboard")["BillboardGUI"]["Canvas"]
 local HTTP = game:GetService("HttpService")
 local pixelSize = UDim2.new(0, 2, 0, 2)
 
-local SERVER = "http://0.0.0.0/?src="
+local SERVER = "http://0.0.0.0/"
 local AUTH = ""
 
 function Render(Input)
@@ -73,7 +73,7 @@ function SizeCanvas(y, x)
 end
 
 function Begin(url)
-    local URL = SERVER..url
+    local URL = SERVER .. "?src=" .. url
     local RESPONSE
     local Success, Error = pcall(
         function()
