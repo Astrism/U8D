@@ -42,6 +42,6 @@ Follow this if you wouldn't setup the server, only supports PNGs.
 Rename your png `img.png` and start using `node index.js`, `export.u8d` contains the data to use.
 
 ### Gallery
+https://user-images.githubusercontent.com/49074962/199750916-23b7f32d-479c-42c4-b52d-d7f9ea153e2c.mp4
 <img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037532705757351966/image.png">
 <img src="https://cdn.discordapp.com/attachments/1036834806140502027/1037394873634013205/unknown.png">
-[Outdated Video](https://user-images.githubusercontent.com/49074962/199749711-c8dc322f-f3a6-4f22-8917-267bb44a5b3e.mp4)
