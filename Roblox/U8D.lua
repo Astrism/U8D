@@ -5,7 +5,7 @@ local pixelSize = UDim2.new(0, 2, 0, 2)
 local SERVER = "http://0.0.0.0/"
 local AUTH = ""
 
-function Render(Input)
+function Render(Input, canvas)
     local Height = #Input
 
     for RowIndex = 1, Height do
@@ -19,7 +19,7 @@ function Render(Input)
         frame.Name = "0"
         frame.ZIndex = 0
         frame.Visible = false
-        frame.Parent = Canvas
+        frame.Parent = canvas
 
         for ColumnIndex = 1, #Input[RowIndex] do
             task.spawn(
@@ -52,27 +52,33 @@ function Render(Input)
         Input[RowIndex] = nil
         task.wait()
     end
-
-    Height = nil
-    for _, frame in pairs(Canvas:GetChildren()) do
+	
+    for _, frame in pairs(canvas:GetChildren()) do
         frame.Visible = true
         frame = nil
     end
+	
+	canvas = nil
+	Height = nil
 end
 
-function ClearCanvas()
-    for _, child in pairs(Canvas:GetChildren()) do
+function ClearCanvas(canvas)
+    for _, child in pairs(canvas:GetChildren()) do
         child:Destroy()
         child = nil
     end
+	canvas = nil
 end
-function SizeCanvas(y, x)
-    Canvas.Size = UDim2.new(0, x * math.floor(pixelSize.X.Offset), 0, y * math.floor(pixelSize.Y.Offset))
+function SizeCanvas(y, x, canvas)
+	canvas.Size = UDim2.new(0, x * math.floor(pixelSize.X.Offset), 0, y * math.floor(pixelSize.Y.Offset))
+	
+	canvas = nil
     y = nil
     x = nil
 end
 
-function Begin(url)
+function Begin(url, canvas)
+	local targetCanvas = canvas or Canvas
     local URL = SERVER .. "?src=" .. url
     local RESPONSE
     local Success, Error = pcall(
@@ -84,17 +90,18 @@ function Begin(url)
     if Success then
         RESPONSE = HTTP:JSONDecode(RESPONSE)
 
-        ClearCanvas()
-        SizeCanvas(#RESPONSE, #RESPONSE[1])
+        ClearCanvas(targetCanvas)
+        SizeCanvas(#RESPONSE, #RESPONSE[1], targetCanvas)
         task.spawn(function()
-			Render(RESPONSE)
+			Render(RESPONSE, targetCanvas)
 		end)
-		Response = nil
     else
         error(Error)
-		
-		Response = nil
-		Success = nil
-		Error = nil
     end
+	
+	canvas = nil
+	targetCanvas = nil
+	Response = nil
+	Success = nil
+	Error = nil
 end
